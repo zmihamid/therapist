@@ -23,10 +23,7 @@ li {
 a {
 	text-decoration: none;
 }
-button
-{
-	border: none;
-}
+
 input {
 	outline: none !important;
 }
@@ -42,4 +39,7 @@ textarea {
 }
 .back_left_side {
 	background: linear-gradient(360deg, #003CB5 0%, rgba(0, 60, 181, 0) 42.4%), url(./assets/images/back_login.png);
+}
+.active_side {
+	filter: brightness(0) saturate(100%) invert(19%) sepia(94%) saturate(1161%) hue-rotate(207deg) brightness(89%) contrast(92%);
 }

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './auth/Login'
 import SideBar from '../shared/SideBar'
 import AppRoute from './AppRoute'
-import { Auth } from './enums/Enums'
+import { Auth } from '../enums/Enums'
 import Register from './auth/Register'
 
 export default function Main() {
@@ -47,8 +47,8 @@ export default function Main() {
                         Dashboard
                     </div>
                 </div>
-                <div className='flex-1  mx-4 mt-[88px] '>
-                    <div className='border border-border rounded-lg flex-1 h-[1000px] bg-white'>
+                <div className='flex-1 ml-[257px]  mx-4 mt-[88px] '>
+                    <div className='border border-border rounded-lg flex-1  bg-white'>
                         <AppRoute />
                     </div>
                     <div className='h-[100px] '></div>
