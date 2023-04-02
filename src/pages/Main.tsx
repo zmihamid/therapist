@@ -42,12 +42,34 @@ export default function Main() {
         return (
             <div className='w-full bg-[#F7F8FB] min-h-full flex'>
                 <SideBar />
-                <div className='fixed w-full flex items-center z-0 top-0 left-56 h-[72px] bg-white border-b border-border'>
+                <div className='fixed w-full flex items-center z-0 top-0 lg:left-56 h-[72px] bg-white border-b border-border'>
                     <div className='px-9 text-sm'>
                         Dashboard
                     </div>
                 </div>
-                <div className='flex-1 ml-[257px]  mx-4 mt-[88px] '>
+                <div className='w-full flex-1 lg:ml-[257px]  px-4 mt-[88px] '>
+                    <div className='border border-border rounded-lg flex-1  bg-white'>
+                        <AppRoute />
+                    </div>
+                    <div className='h-[100px] '></div>
+                </div>
+
+                <div className='fixed w-full flex items-center z-0 bottom-0 lg:left-56 h-[72px] bg-white border-b border-border'>
+                    <div className='px-9 text-sm opacity-40'>
+                        @2023
+                    </div>
+                </div>
+            </div>
+        )
+        return (
+            <div className='w-full bg-[#F7F8FB] min-h-full flex'>
+                <SideBar />
+                <div className='fixed w-full flex items-center z-0 top-0 lg:left-56 h-[72px] bg-white border-b border-border'>
+                    <div className='px-9 text-sm'>
+                        Dashboard
+                    </div>
+                </div>
+                <div className='flex-1 lg:ml-[257px]  mx-4 mt-[88px] '>
                     <div className='border border-border rounded-lg flex-1  bg-white'>
                         <AppRoute />
                     </div>
@@ -55,7 +77,7 @@ export default function Main() {
                 </div>
 
 
-                <div className='fixed w-full flex items-center z-0 bottom-0 left-56 h-[72px] bg-white border-b border-border'>
+                <div className='fixed w-full flex items-center z-0 bottom-0 lg:left-56 h-[72px] bg-white border-b border-border'>
                     <div className='px-9 text-sm opacity-40'>
                         @2023
                     </div>

@@ -4,16 +4,18 @@ import StarIcon from '../assets/images/star.svg'
 import ChildImage from '../assets/images/children.png'
 import LogoBlue from '../assets/images/logo_blue.svg'
 import Button from '../components/Button'
+import Table from '../components/Table'
 
 export default function Dashboard() {
+
   return (
     <div className='py-4 text-sm'>
       <div className='px-6 pb-4 border-b border-border'>
-        <div>
+        <div className='text-center sm:text-left'>
           Welcome,
         </div>
 
-        <div className='flex justify-between mt-4 items-center'>
+        <div className='flex flex-col sm:flex-row justify-between mt-4 items-center'>
           <div className='flex items-center'>
             <img src={doctor} alt='' className='w-12 h-12 rounded-full object-cover border border-black' />
             <div className='text-primary text-base font-medium ml-3'>
@@ -21,7 +23,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className='bg-secondary w-[199px] h-12 rounded-[4px] flex justify-center items-center'>
+          <div className='bg-secondary w-[199px] mt-6 sm:mt-0 h-12 rounded-[4px] flex justify-center items-center'>
             <img src={MessageIcon} alt='' />
             <div className='text-primary font-medium ml-2'>
               3 Unread Messages
@@ -31,9 +33,9 @@ export default function Dashboard() {
       </div>
 
       <div className='px-6 mt-4'>
-        <div className='flex justify-between gap-4'>
+        <div className='flex flex-wrap lg:flex-nowrap justify-between gap-4'>
 
-          <div className='flex-1 h-28 rounded-lg flex flex-col justify-center px-6 border border-border'>
+          <div className='flex-1 lg:min-w-[20%] min-w-[100%] md:min-w-[40%] h-28 rounded-lg flex flex-col justify-center px-6 border border-border'>
             <div className='font-semibold'>
               Today’s Sessions
             </div>
@@ -41,7 +43,7 @@ export default function Dashboard() {
               4
             </div>
           </div>
-          <div className='flex-1 h-28 bg-primary text-white rounded-lg flex flex-col justify-center px-6'>
+          <div className='flex-1 lg:min-w-[20%] min-w-[100%] md:min-w-[40%] h-28 bg-primary text-white rounded-lg flex flex-col justify-center px-6'>
             <div className='font-semibold'>
               Total Sessions
             </div>
@@ -50,7 +52,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className='flex-1 h-28 bg-secondary text-primary rounded-lg flex flex-col justify-center px-6'>
+          <div className='flex-1 lg:min-w-[20%] min-w-[100%] md:min-w-[40%] h-28 bg-secondary text-primary rounded-lg flex flex-col justify-center px-6'>
             <div className='font-semibold'>
               Total Patients
             </div>
@@ -59,7 +61,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className='flex-1 h-28 bg-[#FFCB44] rounded-lg flex flex-col justify-center px-6'>
+          <div className='flex-1 lg:min-w-[20%] min-w-[100%] md:min-w-[40%] h-28 bg-[#FFCB44] rounded-lg flex flex-col justify-center px-6'>
             <div className='font-semibold'>
               You have Good Reputation!
             </div>
@@ -114,44 +116,53 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <table className='w-full'>
-          <thead className='h-10 border-b border-border text-xs text-black_opacity_40'>
-            <tr>
-              <td>
-                Auther
-              </td>
-              <td>
-                Message
-              </td>
-              <td>
-                Action
-              </td>
-            </tr>
-          </thead>
-          <tr className='h-14 border-b border-border text-xs'>
-            <td>
-              <div className='flex items-center'>
-                <img src={LogoBlue} className='w-6' />
-                <div className='ml-2'>
-                  Support
-                </div>
-              </div>
-            </td>
-            <td className='font-medium'>
-              Payment Problem Has Been Solved
-            </td>
-            <td className='w-16'>
-              <div className='w-16'>
-              <Button
-              title='Reply'
-              height={24}
-              />
-              </div>
-            </td>
-          </tr>
-        </table>
+        
+        <div className="relative overflow-x-auto mt-2">
+          <table className="w-full text-xs ">
+            <thead className='h-10 border-b border-border text-xs text-black_opacity_40'>
+              <tr>
+                <td scope="col" className='td'>
+                  Auther
+                </td>
+                <td scope="col" className='td'>
+                  Message
+                </td>
+                <td scope="col" className='td'>
+                  Action
+                </td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr className="border-b ">
+                <td scope="row" className="td">
+                  <div className='flex items-center'>
+                    <img src={LogoBlue} className='w-6' />
+                    <div className='ml-2'>
+                      Support
+                    </div>
+                  </div>
+                </td>
+                <td className="td font-medium">
+                  Payment Problem Has Been Solved
+                </td>
+                <td className="td">
+                  <div className='w-16'>
+                    <Button
+                      title='Reply'
+                      height={24}
+                    />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
 
       </div>
+
+
 
     </div>
   )

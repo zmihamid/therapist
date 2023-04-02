@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.td {
+		@apply px-6 py-4 whitespace-nowrap
+	}
+}
+
 body {
   font-family: Poppins !important;
   margin: 0;

@@ -14,7 +14,7 @@ import LogoutIcon from '../assets/images/logout.svg'
 
 export default function SideBar() {
   return (
-    <div className='w-[240px] max-h-full overflow-y-auto min-h-full text-sm fixed z-10 bg-white border-r border-border px-5 pt-5'>
+    <div className='w-[240px] hidden lg:block max-h-full overflow-y-auto min-h-full text-sm fixed z-10 bg-white border-r border-border px-5 pt-5'>
       <div className='flex mt-2'>
         <img src={LogoBlue} alt='' />
         <div className='text-primary font-medium ml-2'>
